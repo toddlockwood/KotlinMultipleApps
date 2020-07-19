@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KotlinMultipleApps</string>
+    <string name="txtHead">Calculate your Age</string>
+    <string name="in_minutes">in minutes</string>
+    <string name="selectDate">Select Date</string>
+    <string name="selected_date">Selected Date</string>
+    <string name="age_in_minutes">AGE IN MINUTES</string>
+    <string name="ageapp">AgeApp</string>
+    <string name="calcapp">CalcApp</string>
+</resources>
