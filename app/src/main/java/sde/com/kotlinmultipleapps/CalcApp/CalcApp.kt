@@ -5,10 +5,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_calc_app.*
+import sde.com.kotlinmultipleapps.AppCompatActivityExtension
 import sde.com.kotlinmultipleapps.R
 import java.lang.Exception
 
-class CalcApp : AppCompatActivity() {
+class CalcApp : AppCompatActivityExtension() {
 
     private var lastNumeric : Boolean = false
     private var lastDot : Boolean = false

@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CalcApp.CalcApp"></activity>
+        <activity android:name=".QuizApp.ResultQuizActivity"></activity>
+        <activity
+            android:name=".QuizApp.QuizQuestionsActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".QuizApp.QuizApp" />
+        <activity android:name=".CalcApp.CalcApp" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CalcAgeApp.CalcAgeApp"></activity>
+        <activity
+            android:name=".CalcAgeApp.CalcAgeApp"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

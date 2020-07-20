@@ -6,11 +6,12 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_age_calc_app.*
+import sde.com.kotlinmultipleapps.AppCompatActivityExtension
 import sde.com.kotlinmultipleapps.R
 import java.text.SimpleDateFormat
 import java.util.*
 
-class CalcAgeApp : AppCompatActivity() {
+class CalcAgeApp : AppCompatActivityExtension() {
 
     private lateinit var selectedDate :String
 
