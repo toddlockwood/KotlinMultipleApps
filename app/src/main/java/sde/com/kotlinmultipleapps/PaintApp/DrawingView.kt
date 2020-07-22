@@ -17,6 +17,7 @@ class DrawingView(context:Context, attrs: AttributeSet) : View(context, attrs) {
     private var color = Color.BLACK
     private var canvas : Canvas? = null
     private val mPaths = ArrayList<CustomPath>()
+    private val mUndoPaths = ArrayList<CustomPath>()
 
     init {
         setUpDrawing()
@@ -51,6 +52,27 @@ class DrawingView(context:Context, attrs: AttributeSet) : View(context, attrs) {
 
         }
 
+    }
+
+    fun getBitmapFromView(view:View) :Bitmap{
+        val returnedBitmap = Bitmap.createBitmap(view.width,view.height,Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(returnedBitmap)
+        val bgDraw = view.background
+        if(bgDraw!=null){
+            bgDraw.draw(canvas)
+        }else{
+            canvas.drawColor(Color.WHITE)
+        }
+        view.draw(canvas)
+        return returnedBitmap
+    }
+
+
+    fun onClickUndo(){
+        if (mPaths.size>0){
+            mUndoPaths.add(mPaths.removeAt(mPaths.size-1))
+            invalidate()
+        }
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
@@ -91,6 +113,11 @@ class DrawingView(context:Context, attrs: AttributeSet) : View(context, attrs) {
     fun setBrushSize(newSize: Float){
         mBrushSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,newSize,resources.displayMetrics)
         mDrawPaint!!.strokeWidth = mBrushSize
+    }
+
+    fun setColor(newColor: String){
+        color = Color.parseColor(newColor)
+        mDrawPaint!!.color = color
     }
 
     internal inner class CustomPath(var color: Int,

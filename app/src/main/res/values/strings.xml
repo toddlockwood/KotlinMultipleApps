@@ -8,4 +8,5 @@
     <string name="ageapp">AgeApp</string>
     <string name="calcapp">CalcApp</string>
     <string name="quizapp">QuizApp</string>
+    <string name="please_wait">Please Wait...</string>
 </resources>
