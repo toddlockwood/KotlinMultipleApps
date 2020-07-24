@@ -9,4 +9,7 @@
     <string name="calcapp">CalcApp</string>
     <string name="quizapp">QuizApp</string>
     <string name="please_wait">Please Wait...</string>
+    <string name="paintapp">PaintApp</string>
+    <string name="workoutapp">WorkoutApp</string>
+    <string name="image">image</string>
 </resources>

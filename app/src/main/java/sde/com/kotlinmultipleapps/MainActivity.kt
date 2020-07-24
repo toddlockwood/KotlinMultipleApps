@@ -9,6 +9,7 @@ import sde.com.kotlinmultipleapps.CalcAgeApp.CalcAgeApp
 import sde.com.kotlinmultipleapps.CalcApp.CalcApp
 import sde.com.kotlinmultipleapps.PaintApp.PaintActivity
 import sde.com.kotlinmultipleapps.QuizApp.QuizApp
+import sde.com.kotlinmultipleapps.WorkoutApp.WorkoutApp
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +35,10 @@ class MainActivity : AppCompatActivity() {
 
         btnPaintApp.setOnClickListener {
             val intent = Intent(this,PaintActivity::class.java)
+            startActivity(intent) }
+
+        btnWorkoutApp.setOnClickListener {
+            val intent = Intent(this,WorkoutApp::class.java)
             startActivity(intent) }
     }
 

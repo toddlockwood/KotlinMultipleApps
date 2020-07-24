@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sde.com.kotlinmultipleapps">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PaintApp.PaintActivity"></activity>
+        <activity android:name=".WorkoutApp.ExerciseActivity"></activity>
+        <activity android:name=".WorkoutApp.WorkoutApp" />
+        <activity android:name=".PaintApp.PaintActivity" />
         <activity android:name=".QuizApp.ResultQuizActivity" />
         <activity
             android:name=".QuizApp.QuizQuestionsActivity"
@@ -31,13 +33,13 @@
             android:windowSoftInputMode="adjustResize" />
 
         <provider
-            android:authorities="sde.com.kotlinmultipleapps.fileprovider"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="sde.com.kotlinmultipleapps.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/paths"></meta-data>
-
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
         </provider>
     </application>
 
