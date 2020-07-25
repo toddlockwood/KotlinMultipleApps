@@ -16,30 +16,32 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        window.decorView.systemUiVisibility =View.SYSTEM_UI_FLAG_FULLSCREEN
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
-        btnAgeApp.setOnClickListener{
+        btnAgeApp.setOnClickListener {
             val intent = Intent(this, CalcAgeApp::class.java)
             startActivity(intent)
         }
 
         btnCalcApp.setOnClickListener {
-            val intent = Intent(this,CalcApp::class.java)
+            val intent = Intent(this, CalcApp::class.java)
             startActivity(intent)
         }
 
         btnQuizApp.setOnClickListener {
-            val intent = Intent(this,QuizApp::class.java)
+            val intent = Intent(this, QuizApp::class.java)
             startActivity(intent)
         }
 
         btnPaintApp.setOnClickListener {
-            val intent = Intent(this,PaintActivity::class.java)
-            startActivity(intent) }
+            val intent = Intent(this, PaintActivity::class.java)
+            startActivity(intent)
+        }
 
         btnWorkoutApp.setOnClickListener {
-            val intent = Intent(this,WorkoutApp::class.java)
-            startActivity(intent) }
+            val intent = Intent(this, WorkoutApp::class.java)
+            startActivity(intent)
+        }
     }
 
 }

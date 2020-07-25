@@ -1,5 +1,6 @@
 package sde.com.kotlinmultipleapps.WorkoutApp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -13,7 +14,8 @@ class WorkoutApp : AppCompatActivityExtension() {
         setContentView(R.layout.activity_workout_app)
 
         llStart.setOnClickListener {
-            Toast.makeText(this,"Hello",Toast.LENGTH_LONG).show()
+            var intent = Intent(this, ExerciseActivity::class.java)
+            startActivity(intent)
         }
     }
 }
