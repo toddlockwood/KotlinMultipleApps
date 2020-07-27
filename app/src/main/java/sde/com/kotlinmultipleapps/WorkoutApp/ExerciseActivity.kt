@@ -26,11 +26,11 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener{
 
     private var restTimer: CountDownTimer? = null
     private var restProgress = 0
-    private var progressDuration = 10
+    private var progressDuration = 1
 
     private var exerciseTimer: CountDownTimer? = null
     private var exerciseProgress = 0
-    private var exerciseProgressDuration = 30
+    private var exerciseProgressDuration = 1
 
     private var exerciseList: ArrayList<ExerciseModel>? = null
     private var currentExercisePosition = -1
@@ -97,7 +97,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener{
             }
 
             override fun onFinish() {
-                if (currentExercisePosition < exerciseList!!.size - 1) {
+                if (currentExercisePosition < 1) {
                     exerciseList!![currentExercisePosition].setIsSelected(false)
                     exerciseList!![currentExercisePosition].setIsCompleted(true)
                     setUpRestView()
