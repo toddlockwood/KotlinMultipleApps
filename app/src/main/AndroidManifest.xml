@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WorkoutApp.HistoryActivity"></activity>
+        <activity android:name=".HappyPlacesApp.AddHappyPlaceActivity"></activity>
+        <activity android:name=".HappyPlacesApp.HappyPlacesApp" />
+        <activity android:name=".WorkoutApp.HistoryActivity" />
         <activity android:name=".WorkoutApp.BMIActivity" />
         <activity android:name=".WorkoutApp.FinishActivity" />
         <activity android:name=".WorkoutApp.ExerciseActivity" />

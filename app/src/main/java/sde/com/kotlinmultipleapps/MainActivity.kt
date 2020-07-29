@@ -7,6 +7,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import sde.com.kotlinmultipleapps.CalcAgeApp.CalcAgeApp
 import sde.com.kotlinmultipleapps.CalcApp.CalcApp
+import sde.com.kotlinmultipleapps.HappyPlacesApp.HappyPlacesApp
 import sde.com.kotlinmultipleapps.PaintApp.PaintActivity
 import sde.com.kotlinmultipleapps.QuizApp.QuizApp
 import sde.com.kotlinmultipleapps.WorkoutApp.WorkoutApp
@@ -40,6 +41,11 @@ class MainActivity : AppCompatActivity() {
 
         btnWorkoutApp.setOnClickListener {
             val intent = Intent(this, WorkoutApp::class.java)
+            startActivity(intent)
+        }
+
+        btnHappyPlApp.setOnClickListener {
+            val intent = Intent(this, HappyPlacesApp::class.java)
             startActivity(intent)
         }
     }
