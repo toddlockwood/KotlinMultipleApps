@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
+    tools:context=".HappyPlacesApp.activities.HappyPlacesApp">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_happy_places_list"
@@ -13,7 +13,7 @@
         android:visibility="gone"
         tools:visibility="gone" />
 
-    <!--This text view we will make it visible when the list size is 0 means no data available to display in list.-->
+
     <TextView
         android:id="@+id/tv_no_records_available"
         android:layout_width="match_parent"
